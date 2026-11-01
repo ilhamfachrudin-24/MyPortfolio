@@ -1,40 +1,70 @@
 "use client";
 
 import { motion } from "framer-motion";
+
 import {
-  Code2,
-  Brain,
+  UserRound,
+  Sparkles,
   Blocks
 } from "lucide-react";
+
 
 
 export default function About(){
 
 
-const cards = [
+const highlights = [
+
 
 {
-icon:<Blocks className="text-cyan-400" />,
-title:"Web3 Developer",
+
+icon:
+<UserRound className="text-cyan-400"/>,
+
+
+title:
+"Web3 Developer",
+
+
 text:
-"Building blockchain applications, decentralized solutions, and exploring Solana & Ethereum ecosystems."
+"Building blockchain applications, decentralized tools, and exploring Web3 ecosystems including Solana and Ethereum."
+
 },
 
 
+
 {
-icon:<Brain className="text-cyan-400" />,
-title:"AI Builder",
+
+icon:
+<Sparkles className="text-cyan-400"/>,
+
+
+title:
+"AI Engineer",
+
+
 text:
-"Creating AI automation workflows, experimenting with Generative AI, LLM, and AI-powered tools."
+"Developing AI-powered solutions, automation workflows, and experimenting with Generative AI and LLM technologies."
+
 },
 
 
+
 {
-icon:<Code2 className="text-cyan-400" />,
-title:"Full Stack Developer",
+
+icon:
+<Blocks className="text-cyan-400"/>,
+
+
+title:
+"Full Stack Builder",
+
+
 text:
-"Developing modern applications using Next.js, TypeScript, Python, and scalable technologies."
+"Creating modern web applications using Next.js, TypeScript, Python, and scalable development technologies."
+
 }
+
 
 ];
 
@@ -43,26 +73,35 @@ text:
 return (
 
 <section
+
 id="about"
+
 className="
 max-w-6xl
 mx-auto
 px-6
 py-24
 "
+
 >
 
 
 <motion.h2
 
 initial={{
+
 opacity:0,
+
 y:30
+
 }}
 
 whileInView={{
+
 opacity:1,
+
 y:0
+
 }}
 
 className="
@@ -70,7 +109,7 @@ text-4xl
 md:text-5xl
 font-bold
 gradient-text
-mb-10
+mb-8
 "
 
 >
@@ -82,20 +121,26 @@ About Me
 
 
 
+
 <p className="
-text-gray-300
+text-gray-400
+text-lg
 leading-8
 max-w-4xl
 mb-12
-">
+"
 
-I am Ahmad Ilham, a Web3 Developer and AI Builder
-focused on Blockchain Technology, Artificial Intelligence,
-and Full Stack Development.
+>
 
-I explore and build digital solutions including
-decentralized applications, crypto analytics tools,
-AI automation systems, and modern web applications.
+I am a Web3 Developer, AI Engineer, and Full Stack Developer
+focused on building modern digital solutions using Blockchain,
+Artificial Intelligence, and software development technologies.
+
+I create and research blockchain applications, AI automation tools,
+crypto analytics platforms, and innovative technology products.
+
+My journey focuses on continuous learning, open-source development,
+and building practical solutions that connect Web3 and AI.
 
 </p>
 
@@ -106,13 +151,15 @@ AI automation systems, and modern web applications.
 <div className="
 grid
 md:grid-cols-3
-gap-6
-">
+gap-8
+"
+
+>
 
 
 {
 
-cards.map((card,index)=>(
+highlights.map((item,index)=>(
 
 
 <motion.div
@@ -120,7 +167,9 @@ cards.map((card,index)=>(
 key={index}
 
 whileHover={{
-y:-10
+
+y:-8
+
 }}
 
 className="
@@ -134,21 +183,26 @@ p-7
 
 <div className="
 mb-5
-">
+"
 
-{card.icon}
+>
+
+{item.icon}
 
 </div>
+
 
 
 
 <h3 className="
 text-xl
 font-bold
-mb-3
-">
+mb-4
+"
 
-{card.title}
+>
+
+{item.title}
 
 </h3>
 
@@ -157,9 +211,11 @@ mb-3
 <p className="
 text-gray-400
 leading-7
-">
+"
 
-{card.text}
+>
+
+{item.text}
 
 </p>
 
@@ -175,6 +231,7 @@ leading-7
 
 
 </div>
+
 
 
 </section>
