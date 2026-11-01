@@ -1,13 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+
 import {
   Github,
-  ExternalLink,
-  Bot,
-  Blocks,
-  ChartNoAxesCombined
+  ExternalLink
 } from "lucide-react";
+
 
 
 export default function Projects(){
@@ -15,67 +14,111 @@ export default function Projects(){
 
 const projects = [
 
-{
-icon:<Bot className="text-cyan-400" size={35}/>,
 
-title:"TITAN AI Trading Bot",
+{
+
+title:
+"TITAN AI Trading Bot",
+
+
+category:
+"AI + Crypto Trading Infrastructure",
+
 
 description:
-"AI-powered crypto trading framework combining Multi AI Analysis, Market Intelligence, Smart Money Tracking, Risk Management, and automated trading concepts.",
+"AI-powered crypto trading framework combining multi-model AI analysis, market intelligence, smart money tracking, risk management, and automated trading architecture.",
 
-stack:[
+
+tech:[
+
 "Python",
+
 "FastAPI",
+
+"AI Agents",
+
 "Next.js",
-"TypeScript",
-"AI API"
+
+"Blockchain"
+
 ],
 
+
 github:
-"https://github.com/ilhamfachrudin-24/TITAN-AI-Trading-Bot"
+"https://github.com/ilhamfachrudin-24"
+
 
 },
 
 
 
 {
-icon:<Blocks className="text-cyan-400" size={35}/>,
 
-title:"BlockSeries",
+title:
+"BlockSeries",
+
+
+category:
+"Web3 Application Platform",
+
 
 description:
-"Web3 application platform focused on blockchain technology, decentralized applications, and modern Web3 architecture.",
+"Web3 platform focused on blockchain technology, decentralized applications, and modern digital infrastructure.",
 
-stack:[
+
+tech:[
+
 "Next.js",
+
 "TypeScript",
-"Tailwind CSS",
-"Web3"
+
+"Tailwind",
+
+"Web3.js",
+
+"Solidity"
+
 ],
+
 
 github:
 "https://github.com/ilhamfachrudin-24"
+
 
 },
 
 
 
 {
-icon:<ChartNoAxesCombined className="text-cyan-400" size={35}/>,
 
-title:"Crypto Analytics Tools",
+title:
+"Crypto Analytics Tools",
+
+
+category:
+"Blockchain Research Tools",
+
 
 description:
-"Blockchain research tools for analyzing token data, liquidity, volume, and crypto ecosystem activity.",
+"Tools for monitoring crypto markets, token analysis, liquidity tracking, and blockchain ecosystem research.",
 
-stack:[
-"DexScreener API",
-"CoinGecko API",
-"Birdeye API"
+
+tech:[
+
+"API",
+
+"Python",
+
+"JavaScript",
+
+"Blockchain Data"
+
 ],
+
 
 github:
 "https://github.com/ilhamfachrudin-24"
+
 
 }
 
@@ -100,19 +143,7 @@ py-24
 >
 
 
-<motion.h2
-
-initial={{
-opacity:0,
-y:30
-}}
-
-whileInView={{
-opacity:1,
-y:0
-}}
-
-className="
+<h2 className="
 text-4xl
 md:text-5xl
 font-bold
@@ -124,7 +155,7 @@ mb-12
 
 Featured Projects
 
-</motion.h2>
+</h2>
 
 
 
@@ -132,8 +163,10 @@ Featured Projects
 <div className="
 grid
 md:grid-cols-3
-gap-6
-">
+gap-8
+"
+
+>
 
 
 {
@@ -146,7 +179,9 @@ projects.map((project,index)=>(
 key={index}
 
 whileHover={{
+
 y:-10
+
 }}
 
 className="
@@ -158,22 +193,28 @@ p-7
 >
 
 
-<div className="
-mb-6
-">
+<p className="
+text-cyan-400
+text-sm
+mb-3
+"
 
-{project.icon}
+>
 
-</div>
+{project.category}
+
+</p>
 
 
 
 
 <h3 className="
-text-xl
+text-2xl
 font-bold
 mb-4
-">
+"
+
+>
 
 {project.title}
 
@@ -186,7 +227,9 @@ mb-4
 text-gray-400
 leading-7
 mb-6
-">
+"
+
+>
 
 {project.description}
 
@@ -200,12 +243,14 @@ flex
 flex-wrap
 gap-2
 mb-6
-">
+"
+
+>
 
 
 {
 
-project.stack.map((item)=>(
+project.tech.map((item)=>(
 
 
 <span
@@ -213,14 +258,13 @@ project.stack.map((item)=>(
 key={item}
 
 className="
-text-xs
 px-3
-py-2
+py-1
 rounded-full
 bg-white/5
 border
 border-white/10
-text-cyan-300
+text-sm
 "
 
 >
@@ -253,7 +297,6 @@ flex
 items-center
 gap-2
 text-cyan-400
-hover:text-cyan-300
 "
 
 >
@@ -262,9 +305,11 @@ hover:text-cyan-300
 
 Repository
 
-<ExternalLink size={15}/>
+
+<ExternalLink size={16}/>
 
 </a>
+
 
 
 
