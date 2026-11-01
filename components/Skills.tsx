@@ -6,55 +6,86 @@ import { motion } from "framer-motion";
 export default function Skills(){
 
 
-const categories = [
+const skillGroups = [
+
 
 {
-title:"Blockchain & Web3",
+title:"Web3 & Blockchain",
 
 skills:[
+
 "Solana",
+
 "Ethereum",
-"Rust",
-"Solidity",
+
 "Smart Contract",
+
+"Solidity",
+
+"Rust",
+
 "DeFi",
-"DApps",
-"Token Development",
+
+"DEX",
+
+"Web3.js",
+
 "Wallet Integration"
+
 ]
 
 },
+
 
 
 {
-title:"Artificial Intelligence",
+title:"AI & Automation",
 
 skills:[
+
 "Generative AI",
-"AI Automation",
-"Prompt Engineering",
+
 "LLM",
+
+"AI Automation",
+
+"Prompt Engineering",
+
 "AI Agents",
-"AI Workflow",
-"AI Coding Assistant"
+
+"Machine Learning",
+
+"AI Tools"
+
 ]
 
 },
+
 
 
 {
 title:"Full Stack Development",
 
 skills:[
-"JavaScript",
-"TypeScript",
-"Python",
+
 "Next.js",
+
+"TypeScript",
+
+"JavaScript",
+
 "React",
+
 "Tailwind CSS",
-"REST API",
-"Git",
+
+"Python",
+
+"FastAPI",
+
+"Node.js",
+
 "GitHub"
+
 ]
 
 }
@@ -80,19 +111,7 @@ py-24
 >
 
 
-<motion.h2
-
-initial={{
-opacity:0,
-y:30
-}}
-
-whileInView={{
-opacity:1,
-y:0
-}}
-
-className="
+<h2 className="
 text-4xl
 md:text-5xl
 font-bold
@@ -104,7 +123,7 @@ mb-12
 
 Technical Skills
 
-</motion.h2>
+</h2>
 
 
 
@@ -112,13 +131,16 @@ Technical Skills
 <div className="
 grid
 md:grid-cols-3
-gap-6
-">
+gap-8
+"
+
+
+>
 
 
 {
 
-categories.map((category,index)=>(
+skillGroups.map((group,index)=>(
 
 
 <motion.div
@@ -126,7 +148,9 @@ categories.map((category,index)=>(
 key={index}
 
 whileHover={{
-scale:1.03
+
+y:-8
+
 }}
 
 className="
@@ -134,6 +158,7 @@ glass
 rounded-3xl
 p-7
 "
+
 
 >
 
@@ -143,12 +168,13 @@ text-xl
 font-bold
 text-cyan-400
 mb-6
-">
+"
 
-{category.title}
+>
+
+{group.title}
 
 </h3>
-
 
 
 
@@ -156,12 +182,14 @@ mb-6
 flex
 flex-wrap
 gap-3
-">
+"
+
+>
 
 
 {
 
-category.skills.map((skill)=>(
+group.skills.map((skill)=>(
 
 
 <span
@@ -177,7 +205,6 @@ border
 border-white/10
 text-sm
 text-gray-300
-hover:border-cyan-400
 hover:text-cyan-400
 transition
 "
