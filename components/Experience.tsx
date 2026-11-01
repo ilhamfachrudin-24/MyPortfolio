@@ -1,11 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+
 import {
-  Brain,
-  Blocks,
-  Search
+  Code2,
+  BrainCircuit,
+  Blocks
 } from "lucide-react";
+
 
 
 export default function Experience(){
@@ -13,33 +15,66 @@ export default function Experience(){
 
 const experiences = [
 
+
 {
-icon:<Brain className="text-cyan-400"/>,
-role:"AI Engineer",
-period:"2025 - Present",
+
+icon:
+<Blocks className="text-cyan-400"/>,
+
+
+role:
+"Independent Web3 Developer",
+
+
+period:
+"2023 - Present",
+
 
 description:
-"Developing AI automation workflows, exploring Generative AI, LLM applications, and AI-assisted development solutions."
+"Building and researching blockchain-based applications, decentralized tools, crypto analytics platforms, and Web3 solutions across Solana and Ethereum ecosystems."
+
 },
 
 
+
 {
-icon:<Blocks className="text-cyan-400"/>,
-role:"Web3 Developer",
-period:"2024 - Present",
+
+icon:
+<BrainCircuit className="text-cyan-400"/>,
+
+
+role:
+"AI Engineer & Automation Builder",
+
+
+period:
+"2024 - Present",
+
 
 description:
-"Building blockchain-based applications, researching Solana and Ethereum ecosystems, DeFi protocols, and decentralized technologies."
+"Developing AI-powered tools, automation workflows, and experimenting with Generative AI, LLM applications, and AI-assisted development."
+
 },
 
 
+
 {
-icon:<Search className="text-cyan-400"/>,
-role:"Crypto Researcher",
-period:"2023 - Present",
+
+icon:
+<Code2 className="text-cyan-400"/>,
+
+
+role:
+"Full Stack Developer (Project Based)",
+
+
+period:
+"2023 - Present",
+
 
 description:
-"Analyzing crypto markets, token ecosystems, blockchain infrastructure, smart contracts, and Web3 innovations."
+"Creating modern web applications using Next.js, TypeScript, Tailwind CSS, Python, and backend technologies with focus on scalable digital products."
+
 }
 
 
@@ -63,19 +98,7 @@ py-24
 >
 
 
-<motion.h2
-
-initial={{
-opacity:0,
-y:30
-}}
-
-whileInView={{
-opacity:1,
-y:0
-}}
-
-className="
+<h2 className="
 text-4xl
 md:text-5xl
 font-bold
@@ -87,14 +110,17 @@ mb-12
 
 Experience
 
-</motion.h2>
+</h2>
 
 
 
 
 <div className="
-space-y-6
-">
+space-y-8
+"
+
+
+>
 
 
 {
@@ -106,38 +132,28 @@ experiences.map((item,index)=>(
 
 key={index}
 
-initial={{
-opacity:0,
-x:-30
-}}
+whileHover={{
 
-whileInView={{
-opacity:1,
-x:0
-}}
+x:10
 
-transition={{
-duration:0.5,
-delay:index*0.2
 }}
 
 className="
 glass
 rounded-3xl
-p-7
+p-8
 flex
-gap-5
-items-start
+gap-6
 "
 
 >
 
 
 <div className="
-p-3
-rounded-xl
-bg-white/5
-">
+mt-1
+"
+
+>
 
 {item.icon}
 
@@ -149,20 +165,24 @@ bg-white/5
 
 
 <h3 className="
-text-xl
+text-2xl
 font-bold
-">
+"
+
+>
 
 {item.role}
 
 </h3>
 
 
+
 <p className="
 text-cyan-400
-text-sm
-mb-3
-">
+mt-2
+"
+
+>
 
 {item.period}
 
@@ -170,10 +190,14 @@ mb-3
 
 
 
+
 <p className="
 text-gray-400
-leading-7
-">
+mt-4
+leading-8
+"
+
+>
 
 {item.description}
 
@@ -182,7 +206,6 @@ leading-7
 
 
 </div>
-
 
 
 </motion.div>
