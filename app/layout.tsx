@@ -6,110 +6,121 @@ import ThemeProvider from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
 
-  title:
-    "Ahmad Ilham | Web3 Developer & AI Engineer",
 
-  description:
-    "Ahmad Ilham is a Web3 Developer, AI Engineer, and Full Stack Developer building blockchain applications, AI automation tools, and modern digital solutions.",
+title:
+"Ahmad Ilham | Web3 Developer & AI Engineer",
 
 
-  keywords: [
-
-    "Ahmad Ilham",
-
-    "Web3 Developer",
-
-    "Blockchain Developer",
-
-    "AI Engineer",
-
-    "Artificial Intelligence",
-
-    "Full Stack Developer",
-
-    "Solana Developer",
-
-    "Ethereum Developer",
-
-    "Smart Contract Developer",
-
-    "DeFi Developer",
-
-    "Next.js Developer",
-
-    "Python Developer"
-
-  ],
-
-
-  authors: [
-
-    {
-      name:
-      "Ahmad Ilham"
-    }
-
-  ],
-
-
-  creator:
-    "Ahmad Ilham",
+description:
+"Web3 Developer, AI Engineer, and Full Stack Developer building blockchain applications, AI automation tools, and digital solutions.",
 
 
 
-  openGraph: {
+keywords:[
 
-    title:
-      "Ahmad Ilham | Web3 Developer & AI Engineer",
+"Web3 Developer",
 
-    description:
-      "Building the future with Blockchain, Artificial Intelligence, and Full Stack Development.",
+"Blockchain Developer",
 
-    type:
-      "website",
+"AI Engineer",
 
-    locale:
-      "en_US"
+"Full Stack Developer",
 
-  },
+"Solana",
 
+"Ethereum",
 
+"Smart Contract",
 
-  twitter: {
+"DeFi",
 
-    card:
-      "summary_large_image",
+"Artificial Intelligence"
 
-    title:
-      "Ahmad Ilham | Web3 AI Developer",
-
-    description:
-      "Web3 Developer, AI Engineer, and Full Stack Developer."
-
-  },
+],
 
 
 
-  icons: {
+authors:[
 
-    icon:
-      "/favicon.ico",
+{
+name:"Ahmad Ilham"
+}
 
-    apple:
-      "/logo.png"
-
-  },
+],
 
 
-  robots: {
 
-    index:
-      true,
+openGraph:{
 
-    follow:
-      true
 
-  }
+title:
+"Ahmad Ilham | Web3 AI Developer",
+
+
+description:
+"Building the future with Web3, Blockchain, and Artificial Intelligence.",
+
+
+type:"website",
+
+
+images:[
+
+{
+url:"/og-image.png",
+
+width:1200,
+
+height:630,
+
+alt:"Ahmad Ilham Web3 AI Developer"
+
+}
+
+]
+
+},
+
+
+
+twitter:{
+
+
+card:"summary_large_image",
+
+
+title:
+"Ahmad Ilham | Web3 AI Developer",
+
+
+description:
+"Web3 Developer • AI Engineer • Full Stack Developer",
+
+
+images:[
+"/og-image.png"
+]
+
+},
+
+
+
+icons:{
+
+icon:"/favicon.ico"
+
+},
+
+
+
+robots:{
+
+index:true,
+
+follow:true
+
+}
+
 
 };
 
@@ -117,28 +128,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 
-  children,
+children,
 
 }: Readonly<{
 
-  children: React.ReactNode;
+children:React.ReactNode;
 
 }>) {
 
 
 return (
 
-<html
-
-lang="en"
-
-suppressHydrationWarning
-
->
-
+<html lang="en" suppressHydrationWarning>
 
 <body>
-
 
 <ThemeProvider>
 
@@ -146,9 +149,7 @@ suppressHydrationWarning
 
 </ThemeProvider>
 
-
 </body>
-
 
 </html>
 
