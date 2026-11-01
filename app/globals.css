@@ -1,0 +1,205 @@
+@import "tailwindcss";
+
+
+:root {
+
+  --background: #050505;
+  --foreground: #ffffff;
+
+}
+
+
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+
+body {
+
+  background: var(--background);
+
+  color: var(--foreground);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  overflow-x: hidden;
+
+}
+
+
+
+/* Background Glow */
+
+body::before {
+
+  content: "";
+
+  position: fixed;
+
+  width: 600px;
+
+  height: 600px;
+
+  background:
+  radial-gradient(
+    circle,
+    rgba(34,211,238,0.15),
+    transparent 70%
+  );
+
+  top: -200px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: -1;
+
+}
+
+
+
+/* Selection */
+
+::selection {
+
+  background: #22d3ee;
+
+  color: black;
+
+}
+
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+
+  width: 10px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+  background: #050505;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+  background: #22d3ee;
+
+  border-radius: 20px;
+
+}
+
+
+
+/* Glass Effect */
+
+.glass {
+
+  background:
+
+  rgba(255,255,255,0.05);
+
+
+  backdrop-filter:
+
+  blur(20px);
+
+
+  border:
+
+  1px solid rgba(255,255,255,0.1);
+
+}
+
+
+
+/* Neon Text */
+
+.neon {
+
+  color:#22d3ee;
+
+  text-shadow:
+
+  0 0 10px #22d3ee,
+  0 0 30px #22d3ee;
+
+}
+
+
+
+/* Gradient Text */
+
+.gradient-text {
+
+  background:
+
+  linear-gradient(
+    90deg,
+    #22d3ee,
+    #a855f7
+  );
+
+
+  -webkit-background-clip:text;
+
+  color:transparent;
+
+}
+
+
+
+/* Animation */
+
+@keyframes float {
+
+
+  0% {
+
+    transform:translateY(0px);
+
+  }
+
+
+  50% {
+
+    transform:translateY(-15px);
+
+  }
+
+
+  100% {
+
+    transform:translateY(0px);
+
+  }
+
+
+}
+
+
+
+.float {
+
+  animation:
+
+  float 4s ease-in-out infinite;
+
+}
