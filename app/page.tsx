@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import LoadingScreen from "@/components/LoadingScreen";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import ProfileCard from "@/components/ProfileCard";
@@ -15,7 +16,6 @@ import Footer from "@/components/Footer";
 import { getGithubProjects } from "@/lib/github";
 
 
-
 export default async function Home(){
 
 
@@ -28,8 +28,10 @@ return (
 <>
 
 
-<Navbar />
+<LoadingScreen />
 
+
+<Navbar />
 
 
 <main>
@@ -37,35 +39,19 @@ return (
 
 <Hero />
 
-
-
 <Stats />
-
-
 
 <ProfileCard />
 
-
-
 <About />
-
-
 
 <Skills />
 
-
-
 <Experience />
-
-
 
 <Projects />
 
-
-
 <ProjectGallery />
-
-
 
 <GithubProjects
 
@@ -73,22 +59,14 @@ projects={githubProjects}
 
 />
 
-
-
 <Certificates />
 
-
-
 <Contact />
-
-
 
 </main>
 
 
-
 <Footer />
-
 
 
 </>
