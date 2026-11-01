@@ -3,193 +3,262 @@
 
 :root {
 
+  --background: #ffffff;
+
+  --foreground: #111111;
+
+}
+
+
+
+.dark {
+
   --background: #050505;
+
   --foreground: #ffffff;
 
 }
 
 
+
 * {
 
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin:0;
+
+  padding:0;
+
+  box-sizing:border-box;
 
 }
+
 
 
 html {
 
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 
 }
+
 
 
 body {
 
-  background: var(--background);
+  background:var(--background);
 
-  color: var(--foreground);
+  color:var(--foreground);
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+  Arial,
+  Helvetica,
+  sans-serif;
 
-  overflow-x: hidden;
+  transition:
+
+  background 0.3s ease,
+
+  color 0.3s ease;
+
+  overflow-x:hidden;
 
 }
+
+
 
 
 
 /* Background Glow */
 
+
 body::before {
 
-  content: "";
+content:"";
 
-  position: fixed;
+position:fixed;
 
-  width: 600px;
+width:600px;
 
-  height: 600px;
+height:600px;
 
-  background:
-  radial-gradient(
-    circle,
-    rgba(34,211,238,0.15),
-    transparent 70%
-  );
+top:-200px;
 
-  top: -200px;
+left:50%;
 
-  left: 50%;
+transform:translateX(-50%);
 
-  transform: translateX(-50%);
+background:
 
-  z-index: -1;
+radial-gradient(
+
+circle,
+
+rgba(34,211,238,0.15),
+
+transparent 70%
+
+);
+
+z-index:-1;
 
 }
+
+
 
 
 
 /* Selection */
 
+
 ::selection {
 
-  background: #22d3ee;
+background:#22d3ee;
 
-  color: black;
+color:black;
 
 }
+
+
 
 
 
 /* Scrollbar */
 
+
 ::-webkit-scrollbar {
 
-  width: 10px;
+width:10px;
 
 }
 
-
-::-webkit-scrollbar-track {
-
-  background: #050505;
-
-}
 
 
 ::-webkit-scrollbar-thumb {
 
-  background: #22d3ee;
+background:#22d3ee;
 
-  border-radius: 20px;
+border-radius:20px;
 
 }
 
 
 
-/* Glass Effect */
+
+
+/* Glass */
+
 
 .glass {
 
-  background:
 
-  rgba(255,255,255,0.05);
+background:
 
-
-  backdrop-filter:
-
-  blur(20px);
+rgba(255,255,255,0.08);
 
 
-  border:
+backdrop-filter:
 
-  1px solid rgba(255,255,255,0.1);
+blur(20px);
+
+
+border:
+
+1px solid rgba(255,255,255,0.15);
+
 
 }
 
 
 
-/* Neon Text */
+.dark .glass {
 
-.neon {
 
-  color:#22d3ee;
+background:
 
-  text-shadow:
+rgba(255,255,255,0.05);
 
-  0 0 10px #22d3ee,
-  0 0 30px #22d3ee;
 
 }
 
 
 
-/* Gradient Text */
+
+
+/* Gradient */
+
 
 .gradient-text {
 
-  background:
 
-  linear-gradient(
-    90deg,
-    #22d3ee,
-    #a855f7
-  );
+background:
+
+linear-gradient(
+
+90deg,
+
+#22d3ee,
+
+#a855f7
+
+);
 
 
-  -webkit-background-clip:text;
+-webkit-background-clip:text;
 
-  color:transparent;
+color:transparent;
+
 
 }
 
 
 
-/* Animation */
+
+
+/* Neon */
+
+
+.neon {
+
+
+color:#22d3ee;
+
+
+text-shadow:
+
+0 0 10px #22d3ee,
+
+0 0 30px #22d3ee;
+
+
+}
+
+
+
+
+
+/* Floating Animation */
+
 
 @keyframes float {
 
 
-  0% {
+0% {
 
-    transform:translateY(0px);
+transform:translateY(0);
 
-  }
-
-
-  50% {
-
-    transform:translateY(-15px);
-
-  }
+}
 
 
-  100% {
+50% {
 
-    transform:translateY(0px);
+transform:translateY(-15px);
 
-  }
+}
+
+
+100% {
+
+transform:translateY(0);
+
+}
 
 
 }
@@ -198,8 +267,10 @@ body::before {
 
 .float {
 
-  animation:
 
-  float 4s ease-in-out infinite;
+animation:
+
+float 4s ease-in-out infinite;
+
 
 }
