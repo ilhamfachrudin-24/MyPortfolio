@@ -1,10 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+
 import {
   Award,
   ExternalLink
 } from "lucide-react";
+
 
 
 export default function Certificates(){
@@ -12,66 +14,103 @@ export default function Certificates(){
 
 const certificates = [
 
+
 {
+
 title:
 "Generative AI Fundamentals",
 
 issuer:
 "AI Training Certificate",
 
+year:
+"2026",
+
 description:
-"Understanding Generative AI concepts, AI tools, and practical artificial intelligence applications."
+"Training focused on Generative AI concepts, AI tools usage, and practical artificial intelligence applications."
+
 },
 
 
 
 {
+
 title:
-"AI Coding Assistant",
+"AI for Coding Assist",
 
 issuer:
 "AI Development Training",
 
+year:
+"2026",
+
 description:
-"Using AI-assisted coding workflows to improve software development productivity."
+"Learning AI-assisted programming workflows, coding productivity, and modern software development with AI tools."
+
 },
 
 
 
 {
+
+title:
+"Artificial Intelligence Training",
+
+issuer:
+"AI Technology Course",
+
+year:
+"2026",
+
+description:
+"Introduction to artificial intelligence, automation, and practical implementation of AI technologies."
+
+},
+
+
+
+{
+
 title:
 "TOEFL ITP",
 
 issuer:
-"English Language Certificate",
+"English Language Assessment",
+
+year:
+"2026",
 
 description:
-"English proficiency certification for professional and technical communication."
+"English proficiency assessment focused on listening, structure, and reading comprehension."
+
 },
 
 
 
 {
+
 title:
 "Microsoft Office & Internet",
 
 issuer:
-"Digital Skills Certificate",
+"Digital Skills Training",
+
+year:
+"2026",
 
 description:
-"Computer fundamentals, productivity tools, and internet technology skills."
-},
+"Training covering productivity tools, internet usage, and digital workplace skills."
 
+}
 
 
 ];
 
 
+
 return (
 
 <section
-
-id="certificates"
 
 className="
 max-w-6xl
@@ -83,19 +122,7 @@ py-24
 >
 
 
-<motion.h2
-
-initial={{
-opacity:0,
-y:30
-}}
-
-whileInView={{
-opacity:1,
-y:0
-}}
-
-className="
+<h2 className="
 text-4xl
 md:text-5xl
 font-bold
@@ -107,17 +134,18 @@ mb-12
 
 Certificates
 
-</motion.h2>
-
+</h2>
 
 
 
 
 <div className="
 grid
-md:grid-cols-2
-gap-6
-">
+md:grid-cols-3
+gap-8
+"
+
+>
 
 
 {
@@ -130,7 +158,9 @@ certificates.map((certificate,index)=>(
 key={index}
 
 whileHover={{
-scale:1.03
+
+y:-10
+
 }}
 
 className="
@@ -151,6 +181,7 @@ mb-5
 
 size={35}
 
+
 />
 
 
@@ -159,8 +190,10 @@ size={35}
 <h3 className="
 text-xl
 font-bold
-mb-2
-">
+mb-3
+"
+
+>
 
 {certificate.title}
 
@@ -172,8 +205,9 @@ mb-2
 <p className="
 text-cyan-400
 text-sm
-mb-4
-">
+"
+
+>
 
 {certificate.issuer}
 
@@ -183,9 +217,28 @@ mb-4
 
 
 <p className="
+text-gray-500
+text-sm
+mt-2
+"
+
+>
+
+{certificate.year}
+
+</p>
+
+
+
+
+
+<p className="
 text-gray-400
+mt-5
 leading-7
-">
+"
+
+>
 
 {certificate.description}
 
@@ -198,22 +251,20 @@ leading-7
 <button
 
 className="
-mt-5
+mt-6
 flex
 items-center
 gap-2
 text-cyan-400
-text-sm
 "
 
 >
 
 View Certificate
 
-<ExternalLink size={15}/>
+<ExternalLink size={16}/>
 
 </button>
-
 
 
 
@@ -227,7 +278,6 @@ View Certificate
 
 
 </div>
-
 
 
 </section>
