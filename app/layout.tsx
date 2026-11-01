@@ -4,158 +4,124 @@ import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
 
 
-
 export const metadata: Metadata = {
 
+  title:
+    "Ahmad Ilham | Web3 Developer & AI Engineer",
 
-title:
-"Ahmad Ilham | Web3 Developer & AI Engineer",
+  description:
+    "Ahmad Ilham is a Web3 Developer, AI Engineer, and Full Stack Developer building blockchain applications, AI automation tools, and modern digital solutions.",
 
 
+  keywords: [
 
-description:
+    "Ahmad Ilham",
 
-"Ahmad Ilham is a Web3 Developer, AI Engineer, and Full Stack Developer building blockchain applications, AI automation tools, and modern digital solutions.",
+    "Web3 Developer",
 
+    "Blockchain Developer",
 
+    "AI Engineer",
 
-keywords:[
+    "Artificial Intelligence",
 
-"Ahmad Ilham",
+    "Full Stack Developer",
 
-"Web3 Developer",
+    "Solana Developer",
 
-"Blockchain Developer",
+    "Ethereum Developer",
 
-"AI Engineer",
+    "Smart Contract Developer",
 
-"Artificial Intelligence",
+    "DeFi Developer",
 
-"Full Stack Developer",
+    "Next.js Developer",
 
-"Solana Developer",
+    "Python Developer"
 
-"Ethereum Developer",
+  ],
 
-"Smart Contract Developer",
 
-"DeFi Developer",
+  authors: [
 
-"Next.js Developer",
+    {
+      name:
+      "Ahmad Ilham"
+    }
 
-"Python Developer"
+  ],
 
-],
 
+  creator:
+    "Ahmad Ilham",
 
 
 
-authors:[
+  openGraph: {
 
-{
+    title:
+      "Ahmad Ilham | Web3 Developer & AI Engineer",
 
-name:
+    description:
+      "Building the future with Blockchain, Artificial Intelligence, and Full Stack Development.",
 
-"Ahmad Ilham"
+    type:
+      "website",
 
-}
+    locale:
+      "en_US"
 
-],
+  },
 
 
 
+  twitter: {
 
-creator:
+    card:
+      "summary_large_image",
 
-"Ahmad Ilham",
+    title:
+      "Ahmad Ilham | Web3 AI Developer",
 
+    description:
+      "Web3 Developer, AI Engineer, and Full Stack Developer."
 
+  },
 
 
-openGraph:{
 
+  icons: {
 
-title:
+    icon:
+      "/favicon.ico",
 
-"Ahmad Ilham | Web3 Developer & AI Engineer",
+    apple:
+      "/logo.png"
 
+  },
 
 
-description:
+  robots: {
 
-"Building the future with Blockchain, Artificial Intelligence, and Full Stack Development.",
+    index:
+      true,
 
+    follow:
+      true
 
-
-type:
-
-"website",
-
-
-
-locale:
-
-"en_US",
-
-
-
-},
-
-
-
-
-
-twitter:{
-
-
-card:
-
-"summary_large_image",
-
-
-
-title:
-
-"Ahmad Ilham | Web3 AI Developer",
-
-
-
-description:
-
-"Web3 Developer, AI Engineer, and Full Stack Developer."
-
-
-},
-
-
-
-
-
-robots:{
-
-
-index:true,
-
-follow:true
-
-
-}
-
-
+  }
 
 };
 
 
 
-
-
 export default function RootLayout({
 
-children,
+  children,
 
 }: Readonly<{
 
-children:React.ReactNode;
+  children: React.ReactNode;
 
 }>) {
 
@@ -185,7 +151,6 @@ suppressHydrationWarning
 
 
 </html>
-
 
 );
 
