@@ -20,24 +20,36 @@
 <body>
 
 
-<nav>
+<nav class="navbar">
 
 <h2>
 ILHAM.DEV
 </h2>
 
-<div>
+<div class="nav-links">
+
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
+
 </div>
 
 </nav>
 
 
 
+
 <section class="hero">
+
+
+<div class="hero-content">
+
+
+<p class="tag">
+WEB3 + AI DEVELOPER
+</p>
 
 
 <h1>
@@ -49,29 +61,26 @@ AHMAD ILHAM
 
 <h2>
 
-Web3 Developer
-<br>
-
-<span>
-AI Engineer & Full Stack Developer
-</span>
+<span id="typing"></span>
 
 </h2>
 
 
-<p>
+<p class="description">
 
 Building Blockchain Applications,
-AI Automation Tools,
-and Modern Digital Solutions.
+AI Automation Tools, and Full Stack
+Digital Solutions.
 
 </p>
 
 
-<div>
+<div class="buttons">
 
-<a class="btn"
-href="https://github.com/ilhamfachrudin-24">
+
+<a class="btn primary"
+href="https://github.com/ilhamfachrudin-24"
+target="_blank">
 
 GitHub
 
@@ -85,6 +94,10 @@ Download CV
 
 </a>
 
+
+</div>
+
+
 </div>
 
 
@@ -94,22 +107,92 @@ Download CV
 
 
 
+
+<section class="stats">
+
+
+<div class="card">
+
+<h3>
+2+
+</h3>
+
+<p>
+Years Web3 Exploration
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+10+
+</h3>
+
+<p>
+Blockchain Ecosystems
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+20+
+</h3>
+
+<p>
+AI Tools Used
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+3+
+</h3>
+
+<p>
+Major Projects
+</p>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
 <section id="about">
 
 
-<h2>
+<h2 class="title">
 About Me
 </h2>
 
 
-<p>
+<p class="text">
 
 I am a Web3 Developer and AI Builder focused on
-Blockchain, Cryptocurrency, Artificial Intelligence,
-and Full Stack Development.
+Blockchain Technology, Cryptocurrency,
+Artificial Intelligence, and Full Stack Development.
 
-I build decentralized applications,
-crypto analytics tools, and AI-powered solutions.
+I build decentralized applications, crypto analytics
+tools, and AI-powered solutions using modern
+technologies.
 
 </p>
 
@@ -120,15 +203,19 @@ crypto analytics tools, and AI-powered solutions.
 
 
 
+
+
 <section id="skills">
 
 
-<h2>
+<h2 class="title">
 Technical Skills
 </h2>
 
 
+
 <div class="grid">
+
 
 
 <div class="card">
@@ -144,11 +231,13 @@ Ethereum<br>
 Rust<br>
 Solidity<br>
 Smart Contract<br>
-DeFi
+DeFi<br>
+DApps
 
 </p>
 
 </div>
+
 
 
 
@@ -164,7 +253,8 @@ Generative AI<br>
 AI Automation<br>
 Prompt Engineering<br>
 LLM<br>
-AI Agents
+AI Agents<br>
+AI Workflow
 
 </p>
 
@@ -172,10 +262,11 @@ AI Agents
 
 
 
+
 <div class="card">
 
 <h3>
-Full Stack
+Full Stack Development
 </h3>
 
 <p>
@@ -184,17 +275,106 @@ JavaScript<br>
 TypeScript<br>
 Python<br>
 Next.js<br>
-Tailwind CSS
+Tailwind CSS<br>
+REST API
 
 </p>
 
 </div>
 
 
+
 </div>
 
 
 </section>
+
+
+
+
+
+
+
+
+<section id="experience">
+
+
+<h2 class="title">
+Experience
+</h2>
+
+
+
+<div class="card">
+
+
+<h3>
+AI Engineer
+</h3>
+
+
+<p>
+
+Developing AI automation workflow,
+AI-assisted development,
+and exploring Generative AI technology.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<h3>
+Web3 Developer
+</h3>
+
+
+<p>
+
+Building blockchain projects,
+crypto analytics tools,
+and decentralized application concepts.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+Crypto Researcher
+</h3>
+
+
+<p>
+
+Analyzing blockchain ecosystem,
+DeFi protocols,
+tokenomics,
+and crypto market data.
+
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
 
 
 
@@ -204,15 +384,19 @@ Tailwind CSS
 <section id="projects">
 
 
-<h2>
+<h2 class="title">
 Featured Projects
 </h2>
+
 
 
 <div class="grid">
 
 
-<div class="card">
+
+
+
+<div class="card project">
 
 
 <h3>
@@ -222,14 +406,25 @@ TITAN AI Trading Bot
 
 <p>
 
-AI crypto trading framework combining:
+AI-powered crypto trading framework.
 
 <br><br>
 
-Multi AI Analysis,
-Market Intelligence,
-Risk Management,
-Smart Money Tracking.
+Features:
+<br>
+✓ Multi AI Analysis
+<br>
+✓ Market Intelligence
+<br>
+✓ Smart Money Tracking
+<br>
+✓ Risk Management
+
+<br><br>
+
+Stack:
+Python, FastAPI,
+Next.js, TypeScript
 
 </p>
 
@@ -239,7 +434,11 @@ Smart Money Tracking.
 
 
 
-<div class="card">
+
+
+
+
+<div class="card project">
 
 
 <h3>
@@ -249,14 +448,24 @@ BlockSeries
 
 <p>
 
-Web3 application platform using:
+Web3 Application Platform.
 
 <br><br>
 
+Features:
+<br>
+✓ Blockchain Integration
+<br>
+✓ Web3 Architecture
+<br>
+✓ Modern Frontend
+
+<br><br>
+
+Stack:
 Next.js,
 TypeScript,
-Tailwind CSS,
-Blockchain Technology.
+Tailwind CSS
 
 </p>
 
@@ -267,7 +476,10 @@ Blockchain Technology.
 
 
 
-<div class="card">
+
+
+
+<div class="card project">
 
 
 <h3>
@@ -277,13 +489,17 @@ Crypto Analytics Tools
 
 <p>
 
-Blockchain research tools using:
+Blockchain research tools.
 
 <br><br>
 
-DexScreener API,
-CoinGecko API,
-Birdeye API.
+Integration:
+<br>
+DexScreener API
+<br>
+CoinGecko API
+<br>
+Birdeye API
 
 </p>
 
@@ -291,10 +507,14 @@ Birdeye API.
 </div>
 
 
+
+
+
 </div>
 
 
 </section>
+
 
 
 
@@ -304,18 +524,17 @@ Birdeye API.
 <section id="contact">
 
 
-<h2>
+<h2 class="title">
 Contact
 </h2>
 
 
-<p>
+<p class="text">
+
 Email:
 novi240397@gmail.com
-</p>
 
-
-<p>
+<br><br>
 
 GitHub:
 github.com/ilhamfachrudin-24
@@ -323,7 +542,21 @@ github.com/ilhamfachrudin-24
 </p>
 
 
+
 </section>
+
+
+
+
+
+
+<footer>
+
+© 2026 Ahmad Ilham
+<br>
+Building The Future With Web3 + AI
+
+</footer>
 
 
 
