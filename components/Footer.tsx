@@ -1,10 +1,16 @@
 "use client";
 
-import { motion } from "framer-motion";
+
 import {
-  Github,
-  Heart
+
+Github,
+
+Linkedin,
+
+Twitter
+
 } from "lucide-react";
+
 
 
 export default function Footer(){
@@ -18,60 +24,52 @@ className="
 border-t
 border-white/10
 mt-20
-px-6
-py-10
 "
 
 >
-
-
-<motion.div
-
-initial={{
-opacity:0
-}}
-
-whileInView={{
-opacity:1
-}}
-
-className="
-max-w-6xl
-mx-auto
-flex
-flex-col
-md:flex-row
-justify-between
-items-center
-gap-5
-text-gray-400
-"
-
->
-
 
 
 <div className="
-text-center
-md:text-left
-">
+max-w-6xl
+mx-auto
+px-6
+py-10
+flex
+flex-col
+md:flex-row
+items-center
+justify-between
+gap-6
+"
+
+>
 
 
-<h3 className="
-text-xl
+
+<div>
+
+
+<h2 className="
+text-2xl
 font-bold
 gradient-text
-mb-2
-">
+"
+
+>
 
 ILHAM.DEV
 
-</h3>
+</h2>
+
 
 
 <p className="
+text-gray-400
+mt-3
 text-sm
-">
+"
+
+>
 
 Web3 Developer • AI Engineer • Full Stack Developer
 
@@ -84,11 +82,13 @@ Web3 Developer • AI Engineer • Full Stack Developer
 
 
 
+
 <div className="
 flex
-items-center
 gap-4
-">
+"
+
+>
 
 
 <a
@@ -98,6 +98,9 @@ href="https://github.com/ilhamfachrudin-24"
 target="_blank"
 
 className="
+glass
+p-3
+rounded-full
 text-cyan-400
 hover:scale-110
 transition
@@ -105,34 +108,59 @@ transition
 
 >
 
-<Github/>
+<Github size={20}/>
 
 </a>
 
 
 
-<p className="
-flex
-items-center
-gap-2
-text-sm
-">
 
-Built with
 
-<Heart
+<a
 
-size={15}
+href="#"
 
 className="
+glass
+p-3
+rounded-full
 text-cyan-400
+hover:scale-110
+transition
 "
 
-/>
+>
 
-and AI
+<Linkedin size={20}/>
 
-</p>
+</a>
+
+
+
+
+
+<a
+
+href="#"
+
+className="
+glass
+p-3
+rounded-full
+text-cyan-400
+hover:scale-110
+transition
+"
+
+>
+
+<Twitter size={20}/>
+
+</a>
+
+
+
+</div>
 
 
 
@@ -141,22 +169,21 @@ and AI
 
 
 
-</motion.div>
 
-
-
-
-
-<p className="
+<div className="
 text-center
-text-xs
-text-gray-600
-mt-8
-">
+text-gray-500
+text-sm
+pb-6
+"
 
-© 2026 Ahmad Ilham. All rights reserved.
+>
 
-</p>
+© 2026 Ahmad Ilham.
+Built with Next.js, TypeScript, AI & Web3 Technology.
+
+</div>
+
 
 
 
