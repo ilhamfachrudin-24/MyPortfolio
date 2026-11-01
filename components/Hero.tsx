@@ -3,32 +3,38 @@
 import { motion } from "framer-motion";
 import {
   Github,
-  Mail,
-  ArrowDown
+  Mail
 } from "lucide-react";
 
+import DownloadCV from "./DownloadCV";
 
-export default function Hero() {
+
+export default function Hero(){
 
 
 return (
 
-<section className="
+<section
+
+className="
 min-h-screen
 flex
 items-center
 justify-center
 text-center
 px-6
-pt-20
-">
+pt-24
+"
+
+
+>
 
 
 <motion.div
 
 initial={{
 opacity:0,
-y:50
+y:40
 }}
 
 animate={{
@@ -50,13 +56,14 @@ max-w-4xl
 <p className="
 text-cyan-400
 tracking-[6px]
-mb-6
 text-sm
+mb-6
 ">
 
 WEB3 • AI • FULL STACK
 
 </p>
+
 
 
 
@@ -71,6 +78,7 @@ gradient-text
 AHMAD ILHAM
 
 </h1>
+
 
 
 
@@ -97,20 +105,20 @@ AI Engineer & Full Stack Developer
 
 <p className="
 mt-8
-text-gray-400
-text-lg
 max-w-2xl
 mx-auto
+text-gray-400
+text-lg
 leading-8
 ">
 
 Building Blockchain Applications,
 AI Automation Tools,
-and Modern Digital Solutions.
+and Modern Full Stack Solutions.
 
 Focused on Web3,
 Artificial Intelligence,
-and scalable software development.
+and scalable technology.
 
 </p>
 
@@ -118,12 +126,13 @@ and scalable software development.
 
 
 
+
 <div className="
 flex
+flex-wrap
 justify-center
 gap-5
 mt-10
-flex-wrap
 ">
 
 
@@ -141,7 +150,7 @@ py-3
 rounded-full
 flex
 items-center
-gap-2
+gap-3
 text-cyan-300
 hover:scale-105
 transition
@@ -158,6 +167,7 @@ GitHub
 
 
 
+
 <a
 
 href="mailto:novi240397@gmail.com"
@@ -169,7 +179,7 @@ py-3
 rounded-full
 flex
 items-center
-gap-2
+gap-3
 text-cyan-300
 hover:scale-105
 transition
@@ -185,40 +195,29 @@ Email
 
 
 
+
+
+<DownloadCV />
+
+
+
 </div>
 
 
 
 
 
-<motion.div
-
-animate={{
-
-y:[0,10,0]
-
-}}
-
-transition={{
-
-repeat:Infinity,
-
-duration:2
-
-}}
-
-className="
-mt-16
-text-cyan-400
+<div className="
+mt-20
+text-sm
+text-gray-500
 "
 
 >
 
+Available for Web3, AI & Full Stack Opportunities
 
-<ArrowDown/>
-
-
-</motion.div>
+</div>
 
 
 
@@ -227,8 +226,6 @@ text-cyan-400
 
 </section>
 
-
 )
-
 
 }
