@@ -8,35 +8,53 @@ const roles = [
 let roleIndex = 0;
 let charIndex = 0;
 
-const typingElement = document.getElementById("typing");
+const typingElement =
+document.getElementById("typing");
+
 
 
 function typeEffect(){
 
+
     if(charIndex < roles[roleIndex].length){
 
-        typingElement.textContent += 
+
+        typingElement.textContent +=
         roles[roleIndex].charAt(charIndex);
+
 
         charIndex++;
 
-        setTimeout(typeEffect,100);
+
+        setTimeout(
+            typeEffect,
+            100
+        );
+
+
+    } else {
+
+
+        setTimeout(
+            deleteEffect,
+            1500
+        );
+
 
     }
 
-    else{
-
-        setTimeout(deleteEffect,1500);
-
-    }
 
 }
 
 
 
+
+
 function deleteEffect(){
 
+
     if(charIndex > 0){
+
 
         typingElement.textContent =
         roles[roleIndex].substring(
@@ -44,15 +62,24 @@ function deleteEffect(){
             charIndex - 1
         );
 
+
         charIndex--;
 
-        setTimeout(deleteEffect,50);
 
-    }
+        setTimeout(
+            deleteEffect,
+            50
+        );
 
-    else{
+
+
+    } else {
+
+
 
         roleIndex++;
+
+
 
         if(roleIndex >= roles.length){
 
@@ -61,11 +88,19 @@ function deleteEffect(){
         }
 
 
-        setTimeout(typeEffect,500);
+
+        setTimeout(
+            typeEffect,
+            500
+        );
+
 
     }
 
+
 }
+
+
 
 
 
@@ -75,41 +110,44 @@ typeEffect();
 
 
 
-// Smooth scroll animation
 
-const links = document.querySelectorAll("a");
+// Smooth scrolling
 
-
-links.forEach(link => {
+document.querySelectorAll(
+"a[href^='#']"
+)
+.forEach(link => {
 
 
     link.addEventListener(
-        "click",
-        function(e){
+    "click",
+    function(e){
 
 
-            const target =
-            document.querySelector(
-            this.getAttribute("href")
-            );
+        e.preventDefault();
 
 
-            if(target){
+        const target =
+        document.querySelector(
+        this.getAttribute("href")
+        );
 
-                e.preventDefault();
 
 
-                target.scrollIntoView({
+        if(target){
 
-                    behavior:"smooth"
 
-                });
+            target.scrollIntoView({
 
-            }
+                behavior:"smooth"
+
+            });
 
 
         }
-    );
+
+
+    });
 
 
 });
@@ -118,12 +156,38 @@ links.forEach(link => {
 
 
 
-// Console message
 
-console.log(
-"🚀 Web3 AI Portfolio Loaded Successfully"
-);
 
-console.log(
-"Built by Ahmad Ilham"
-);
+
+// Scroll reveal
+
+
+const observer =
+new IntersectionObserver(
+
+(entries)=>{
+
+
+entries.forEach(entry=>{
+
+
+if(entry.isIntersecting){
+
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform=
+"translateY(0)";
+
+
+}
+
+
+});
+
+
+},
+
+{
+
+threshold:0.15
