@@ -7,33 +7,145 @@ import ThemeProvider from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
 
+
 title:
-"Ahmad Ilham | Web3 Developer AI Engineer",
+"Ahmad Ilham | Web3 Developer & AI Engineer",
+
 
 
 description:
-"Web3 Developer, AI Engineer and Full Stack Developer building Blockchain Applications, AI Automation Tools, and Digital Solutions.",
+
+"Ahmad Ilham is a Web3 Developer, AI Engineer, and Full Stack Developer building blockchain applications, AI automation tools, and modern digital solutions.",
+
 
 
 keywords:[
+
+"Ahmad Ilham",
+
 "Web3 Developer",
+
 "Blockchain Developer",
+
 "AI Engineer",
-"Full Stack Developer",
-"Solana",
-"Ethereum",
+
 "Artificial Intelligence",
-"DeFi"
+
+"Full Stack Developer",
+
+"Solana Developer",
+
+"Ethereum Developer",
+
+"Smart Contract Developer",
+
+"DeFi Developer",
+
+"Next.js Developer",
+
+"Python Developer"
+
 ],
 
 
+
+
 authors:[
+
 {
-name:"Ahmad Ilham"
+
+name:
+
+"Ahmad Ilham"
+
 }
-]
+
+],
+
+
+
+
+creator:
+
+"Ahmad Ilham",
+
+
+
+
+openGraph:{
+
+
+title:
+
+"Ahmad Ilham | Web3 Developer & AI Engineer",
+
+
+
+description:
+
+"Building the future with Blockchain, Artificial Intelligence, and Full Stack Development.",
+
+
+
+type:
+
+"website",
+
+
+
+locale:
+
+"en_US",
+
+
+
+},
+
+
+
+
+
+twitter:{
+
+
+card:
+
+"summary_large_image",
+
+
+
+title:
+
+"Ahmad Ilham | Web3 AI Developer",
+
+
+
+description:
+
+"Web3 Developer, AI Engineer, and Full Stack Developer."
+
+
+},
+
+
+
+
+
+robots:{
+
+
+index:true,
+
+follow:true
+
+
+}
+
+
 
 };
+
+
 
 
 
@@ -43,14 +155,20 @@ children,
 
 }: Readonly<{
 
-children: React.ReactNode;
+children:React.ReactNode;
 
 }>) {
 
 
 return (
 
-<html lang="en" suppressHydrationWarning>
+<html
+
+lang="en"
+
+suppressHydrationWarning
+
+>
 
 
 <body>
@@ -67,6 +185,7 @@ return (
 
 
 </html>
+
 
 );
 
