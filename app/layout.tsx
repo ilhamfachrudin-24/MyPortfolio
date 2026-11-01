@@ -1,44 +1,37 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+import ThemeProvider from "@/components/ThemeProvider";
+
+
 
 export const metadata: Metadata = {
 
-  title:
-    "Ahmad Ilham | Web3 Developer AI Engineer",
+title:
+"Ahmad Ilham | Web3 Developer AI Engineer",
 
-  description:
-    "Web3 Developer, AI Engineer and Full Stack Developer building Blockchain Applications, AI Automation Tools, and Digital Solutions.",
 
-  keywords: [
-    "Web3 Developer",
-    "Blockchain Developer",
-    "AI Engineer",
-    "Full Stack Developer",
-    "Solana",
-    "Ethereum",
-    "Artificial Intelligence",
-    "DeFi"
-  ],
+description:
+"Web3 Developer, AI Engineer and Full Stack Developer building Blockchain Applications, AI Automation Tools, and Digital Solutions.",
 
-  authors: [
-    {
-      name: "Ahmad Ilham"
-    }
-  ],
 
-  openGraph: {
+keywords:[
+"Web3 Developer",
+"Blockchain Developer",
+"AI Engineer",
+"Full Stack Developer",
+"Solana",
+"Ethereum",
+"Artificial Intelligence",
+"DeFi"
+],
 
-    title:
-      "Ahmad Ilham | Web3 AI Developer",
 
-    description:
-      "Building the future with Web3 and Artificial Intelligence.",
-
-    type:
-      "website",
-
-  },
+authors:[
+{
+name:"Ahmad Ilham"
+}
+]
 
 };
 
@@ -46,29 +39,35 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 
-  children,
+children,
 
 }: Readonly<{
 
-  children: React.ReactNode;
+children: React.ReactNode;
 
 }>) {
 
 
-  return (
+return (
 
-    <html lang="en">
-
-
-      <body>
-
-        {children}
-
-      </body>
+<html lang="en" suppressHydrationWarning>
 
 
-    </html>
+<body>
 
-  );
+
+<ThemeProvider>
+
+{children}
+
+</ThemeProvider>
+
+
+</body>
+
+
+</html>
+
+);
 
 }
