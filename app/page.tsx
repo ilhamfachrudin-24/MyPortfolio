@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import LoadingScreen from "@/components/LoadingScreen";
+import CustomCursor from "@/components/CustomCursor";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import ProfileCard from "@/components/ProfileCard";
@@ -19,7 +20,8 @@ import { getGithubProjects } from "@/lib/github";
 export default async function Home(){
 
 
-const githubProjects = await getGithubProjects();
+const githubProjects =
+await getGithubProjects();
 
 
 
@@ -27,15 +29,14 @@ return (
 
 <>
 
-
 <LoadingScreen />
 
+<CustomCursor />
 
 <Navbar />
 
 
 <main>
-
 
 <Hero />
 
@@ -67,7 +68,6 @@ projects={githubProjects}
 
 
 <Footer />
-
 
 </>
 
